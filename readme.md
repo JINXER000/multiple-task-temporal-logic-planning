@@ -1,5 +1,17 @@
 The software for IROS2023 paper: An interactive system for multiple-task linear temporal logic path planning. 
 
+
+
+
+The supplementary video can be viewed here:
+
+<p align="center">
+<a href="https://youtu.be/XJK5-Igrg-8?si=rN6EGnuxO8BWbBHd
+" target="_blank"><img src="figure/coverpage.png"
+alt="MT-LTL  introduction video" width="480" height="270" /></a>
+</p>
+
+
 # functionality
 - [x] Sampling-based LTL path planning 
 - [x] Task switching

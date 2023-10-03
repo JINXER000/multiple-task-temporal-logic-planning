@@ -1,6 +1,3 @@
-## TODO: rename
-## rename all function name as AaBb(), not aa_bb()
-## make the FSA (idle, planning, acting) into the planner! delete the condition about goal_found
 
 import networkx as nx
 import numpy as np
@@ -588,7 +585,6 @@ class RT_LTL_planner():
         for b_state in buchi_succ:
             if b_state != child.b_state and self.checkBuchiTran(parent.b_state, parent.label, b_state):
                 buchi_candidates.append(b_state)
-             #  TODO: break here
         if len(buchi_candidates)>1: # not a DFA!
             raise NameError('too many candidates')
         elif len(buchi_candidates) ==1:
@@ -673,7 +669,6 @@ class RT_LTL_planner():
 
     def get_bad_regs(self):
         self.bad_regs.clear()
-        # TODO: root_b + root_lab = cur_b
         buchi_succ = self.automaton.succ[self.rt_root.b_state]
         cur_b_state = self.rt_root.b_state
         for b_state in buchi_succ:
@@ -873,7 +868,6 @@ class RT_LTL_planner():
         cost_dict = {}
         rand_label = getLabel(x_rand, self.workspace, self.is_hybrid)
 
-        # TODO: put it into kdtree
         for node in self.tree.nodes:
             if self.isIsolated(node) and node!= self.rt_root:
                 continue
